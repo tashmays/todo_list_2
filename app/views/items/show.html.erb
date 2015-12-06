@@ -1,0 +1,13 @@
+<h1><%= @item.name %></h1>
+<br />
+<label>Priority:</label>
+<p><%= @item.priority %></p>
+
+<label>Description:</label>
+<p><%= @item.description %></p>
+
+<label>Completed?:</label>
+<p><%= @item.completed %></p>
+<hr />
+<%= button_to 'Edit Item', edit_item_path(@item), method: :get %>
+<%= button_to 'Delete Item', item_path(@item), method: :delete, data: {confirm: 'Really delete this item?'} %>
